@@ -29,7 +29,7 @@ const changeStatus = (id) => {
 <template>
 <div class="min-h-screen bg-gray-800">
   <div class = "container flex flex-col pt-8 mx-auto space-y-8">
-    <h1 class="pb-4 text-6xl font-thin tracking-tight text-center ">My Todo App</h1>
+    <h1 class="pb-4 text-6xl font-thin tracking-tight text-center text-purple-300 ">My Todo App</h1>
     <input 
     @change="addToDo"
     v-model="newTodo"
@@ -39,12 +39,12 @@ const changeStatus = (id) => {
     />
     <div class="flex justify-around">
       <div class="w-1/3">
-        <h3 class="text-2xl text-center text-blue-600">Pending</h3>
+        <h3 class="text-2xl text-center text-red-500">Pending</h3>
         <ul class="pt-8 space-y-4">
           <li v-for="todo in pending"
           :key="todo.id"
           @click="changeStatus(todo.id)"
-           class="w-full px-4 py-2 font-bold text-center text-blue-600 duration-200 bg-gray-300 rounded-lg hover:cursor-pointer hover:bg-blue-400 hover:text-gray-200">
+           class="w-full px-4 py-2 font-bold text-center text-blue-600 duration-200 bg-gray-300 rounded-lg hover:cursor-pointer hover:bg-red-400 hover:text-gray-200">
            {{ todo.content }}
            </li>
 
